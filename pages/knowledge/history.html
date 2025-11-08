@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>历史文化 - 藏文化学习交流平台</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <style>
+        .page-hero {
+            background: linear-gradient(135deg, #D84315 0%, #FFB300 100%);
+            color: white;
+            padding: 3rem 0;
+            text-align: center;
+        }
+        .content-section {
+            padding: 3rem 0;
+        }
+        .article {
+            background-color: var(--bg-color);
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: var(--shadow);
+        }
+        .article h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            font-size: 1.75rem;
+        }
+        .article p {
+            color: var(--text-light);
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+        .timeline {
+            position: relative;
+            padding-left: 2rem;
+        }
+        .timeline-item {
+            position: relative;
+            padding-bottom: 2rem;
+        }
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -2rem;
+            top: 0;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: var(--primary-color);
+        }
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            left: -1.7rem;
+            top: 12px;
+            width: 2px;
+            height: 100%;
+            background-color: var(--border-color);
+        }
+        .timeline-item:last-child::after {
+            display: none;
+        }
+        .timeline-year {
+            font-weight: bold;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <h1>🏔️ 藏文化学习交流平台</h1>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="../../index.html">首页</a></li>
+                <li><a href="index.html" class="active">知识库</a></li>
+                <li><a href="../resources/index.html">学习资源</a></li>
+                <li><a href="../community/index.html">交流社区</a></li>
+                <li><a href="#" id="themeToggle" class="theme-toggle">🌓</a></li>
+            </ul>
+            <div class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <header class="page-hero">
+        <div class="container">
+            <h2 style="font-size: 2.5rem; margin-bottom: 1rem;">🏛️ 藏族历史文化</h2>
+            <p style="font-size: 1.2rem;">探索雪域高原的千年文明史</p>
+        </div>
+    </header>
+
+    <section class="content-section">
+        <div class="container">
+            <div class="article">
+                <h3>藏族历史概览</h3>
+                <p>藏族是中国古老的民族之一，主要分布在青藏高原上。藏族拥有悠久的历史和灿烂的文化，创造了独特的高原文明。从远古时期到现代，藏族人民在雪域高原上繁衍生息，创造了辉煌的历史。</p>
+                <p>藏族的历史可以追溯到数千年前，经历了从原始部落到吐蕃王朝的建立，再到与中原王朝的密切交往，形成了独特的民族文化特征。</p>
+            </div>
+
+            <div class="article">
+                <h3>重要历史时期</h3>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-year">公元7世纪（唐朝时期）</div>
+                        <p><strong>吐蕃王朝的建立</strong> - 松赞干布统一高原各部，建立强盛的吐蕃王朝。与唐朝建立和亲关系，迎娶文成公主，促进了汉藏文化交流。</p>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-year">公元8-9世纪</div>
+                        <p><strong>吐蕃的鼎盛时期</strong> - 这一时期吐蕃国力强盛，疆域辽阔，文化繁荣。创制藏文，佛教传入并逐渐发展。</p>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-year">公元10-12世纪</div>
+                        <p><strong>分裂割据时期</strong> - 吐蕃王朝瓦解后，西藏进入长期的分裂割据时期，各地方势力并存。</p>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-year">公元13世纪（元朝）</div>
+                        <p><strong>正式纳入中国版图</strong> - 西藏正式成为中国领土的一部分，中央政府在西藏设立行政机构进行管理。</p>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-year">公元17世纪（清朝）</div>
+                        <p><strong>达赖、班禅制度确立</strong> - 清朝中央政府册封达赖喇嘛和班禅额尔德尼，确立了管理西藏的制度。</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="article">
+                <h3>重要历史人物</h3>
+                <p><strong>松赞干布（617-650年）</strong> - 吐蕃王朝的创立者，统一了青藏高原各部落，建立了强大的吐蕃王朝。他迎娶了唐朝的文成公主和尼泊尔的尺尊公主，促进了藏族与周边民族的文化交流。松赞干布大力推广佛教，创制藏文，为藏族文化的发展奠定了基础。</p>
+                <p><strong>文成公主（625-680年）</strong> - 唐太宗时期的公主，嫁给松赞干布。她入藏时带去了大量的典籍、工匠和技术，对藏族文化发展产生了深远影响，是汉藏友好的象征。</p>
+                <p><strong>赤松德赞（742-797年）</strong> - 吐蕃历史上著名的赞普（国王），在位期间大力扶持佛教，建立桑耶寺，确立佛教在吐蕃的地位。</p>
+            </div>
+
+            <div class="article">
+                <h3>历史文化遗产</h3>
+                <p>藏族在漫长的历史发展过程中，创造了丰富的物质和精神文化遗产：</p>
+                <p><strong>建筑遗产：</strong>布达拉宫、大昭寺、扎什伦布寺等宏伟的宫殿和寺庙建筑，展示了藏族高超的建筑艺术。</p>
+                <p><strong>文献典籍：</strong>《甘珠尔》《丹珠尔》等大量佛教经典和历史文献，记录了藏族的历史和文化。</p>
+                <p><strong>文化传统：</strong>藏历新年、雪顿节等传统节日，以及藏戏、歌舞等民间艺术形式，代代相传。</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>关于平台</h4>
+                    <p>致力于传播和保护藏族优秀传统文化，为学习者提供全面的学习资源和交流空间。</p>
+                </div>
+                <div class="footer-section">
+                    <h4>快速链接</h4>
+                    <ul>
+                        <li><a href="index.html">知识库</a></li>
+                        <li><a href="../resources/index.html">学习资源</a></li>
+                        <li><a href="../community/index.html">交流社区</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>联系我们</h4>
+                    <p>如有问题或建议，欢迎通过 GitHub Issues 与我们联系。</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 藏文化学习交流平台 | 尊重文化，传承文明</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../../js/main.js"></script>
+</body>
+</html>

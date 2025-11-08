@@ -1,0 +1,19 @@
+{
+  "name": "tibetan-culture-learning-platform",
+  "version": "1.0.0",
+  "description": "藏文化学习交流平台 - Tibetan Culture Learning and Communication Platform",
+  "main": "index.html",
+  "scripts": {
+    "dev": "python3 -m http.server 8000",
+    "start": "python3 -m http.server 8000"
+  },
+  "keywords": [
+    "tibetan",
+    "culture",
+    "learning",
+    "education",
+    "community"
+  ],
+  "author": "",
+  "license": "MIT"
+}

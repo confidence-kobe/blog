@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>学习资源 - 藏文化学习交流平台</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <style>
+        .resources-hero {
+            background: linear-gradient(135deg, #1976D2 0%, #42A5F5 100%);
+            color: white;
+            padding: 4rem 0;
+            text-align: center;
+        }
+        .resource-card {
+            background-color: var(--bg-color);
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+        .resource-card:hover {
+            box-shadow: var(--shadow-hover);
+        }
+        .resource-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid var(--border-color);
+        }
+        .resource-icon {
+            font-size: 2.5rem;
+        }
+        .resource-list {
+            list-style: none;
+            padding: 0;
+        }
+        .resource-item {
+            padding: 1rem;
+            margin-bottom: 0.5rem;
+            background-color: var(--bg-light);
+            border-radius: 8px;
+            border-left: 3px solid var(--primary-color);
+        }
+        .resource-item h4 {
+            color: var(--text-color);
+            margin-bottom: 0.5rem;
+        }
+        .resource-item p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <h1>🏔️ 藏文化学习交流平台</h1>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="../../index.html">首页</a></li>
+                <li><a href="../knowledge/index.html">知识库</a></li>
+                <li><a href="index.html" class="active">学习资源</a></li>
+                <li><a href="../community/index.html">交流社区</a></li>
+                <li><a href="#" id="themeToggle" class="theme-toggle">🌓</a></li>
+            </ul>
+            <div class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <header class="resources-hero">
+        <div class="container">
+            <h2 style="font-size: 2.5rem; margin-bottom: 1rem;">学习资源</h2>
+            <p style="font-size: 1.2rem; opacity: 0.95;">丰富多样的学习材料，助力您的文化探索之旅</p>
+        </div>
+    </header>
+
+    <section style="padding: 4rem 0;">
+        <div class="container">
+            <div class="resource-card">
+                <div class="resource-header">
+                    <span class="resource-icon">🔤</span>
+                    <div>
+                        <h3 style="color: var(--text-color); font-size: 1.75rem;">藏语学习</h3>
+                        <p style="color: var(--text-light); margin: 0;">从零开始学习藏语言文字</p>
+                    </div>
+                </div>
+                <ul class="resource-list">
+                    <li class="resource-item">
+                        <h4>藏文字母与发音</h4>
+                        <p>学习30个基字母和4个元音符号的书写和发音，掌握藏文拼读规则。</p>
+                        <a href="language.html#alphabet" class="feature-link">开始学习 →</a>
+                    </li>
+                    <li class="resource-item">
+                        <h4>基础词汇</h4>
+                        <p>常用词汇和日常用语，包括问候、数字、时间、颜色等基本表达。</p>
+                        <a href="language.html#vocabulary" class="feature-link">开始学习 →</a>
+                    </li>
+                    <li class="resource-item">
+                        <h4>语法入门</h4>
+                        <p>了解藏语的基本语法结构、句式和常用语法规则。</p>
+                        <a href="language.html#grammar" class="feature-link">开始学习 →</a>
+                    </li>
+                    <li class="resource-item">
+                        <h4>口语练习</h4>
+                        <p>实用对话场景，提高藏语口语表达能力。</p>
+                        <a href="language.html#speaking" class="feature-link">开始学习 →</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="resource-card">
+                <div class="resource-header">
+                    <span class="resource-icon">🎬</span>
+                    <div>
+                        <h3 style="color: var(--text-color); font-size: 1.75rem;">视频课程</h3>
+                        <p style="color: var(--text-light); margin: 0;">精选优质视频教学内容</p>
+                    </div>
+                </div>
+                <ul class="resource-list">
+                    <li class="resource-item">
+                        <h4>藏文化纪录片</h4>
+                        <p>《第三极》《极地》等纪录片，全方位展示藏族文化和自然风光。</p>
+                    </li>
+                    <li class="resource-item">
+                        <h4>藏语教学视频</h4>
+                        <p>系统的藏语教学视频系列，适合不同水平的学习者。</p>
+                    </li>
+                    <li class="resource-item">
+                        <h4>传统艺术展示</h4>
+                        <p>唐卡绘制、藏戏表演、手工艺制作等传统艺术的视频展示。</p>
+                    </li>
+                    <li class="resource-item">
+                        <h4>文化讲座</h4>
+                        <p>专家学者的文化讲座，深入解读藏族历史、宗教、民俗等话题。</p>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="resource-card">
+                <div class="resource-header">
+                    <span class="resource-icon">🎵</span>
+                    <div>
+                        <h3 style="color: var(--text-color); font-size: 1.75rem;">音频资源</h3>
+                        <p style="color: var(--text-light); margin: 0;">倾听雪域高原的声音</p>
+                    </div>
+                </div>
+                <ul class="resource-list">
+                    <li class="resource-item">
+                        <h4>藏语听力练习</h4>
+                        <p>标准藏语发音音频，提高听力理解能力。</p>
+                    </li>
+                    <li class="resource-item">
+                        <h4>传统音乐</h4>
+                        <p>藏族民歌、宗教音乐、器乐演奏等传统音乐作品。</p>
+                    </li>
+                    <li class="resource-item">
+                        <h4>经文诵读</h4>
+                        <p>佛教经典诵读音频，感受宗教文化的庄严与神圣。</p>
+                    </li>
+                    <li class="resource-item">
+                        <h4>故事讲述</h4>
+                        <p>《格萨尔王传》等民间故事的说唱音频。</p>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="resource-card">
+                <div class="resource-header">
+                    <span class="resource-icon">📚</span>
+                    <div>
+                        <h3 style="color: var(--text-color); font-size: 1.75rem;">电子书籍</h3>
+                        <p style="color: var(--text-light); margin: 0;">精选文化读物和学习教材</p>
+                    </div>
+                </div>
+                <ul class="resource-list">
+                    <li class="resource-item">
+                        <h4>藏语教材</h4>
+                        <p>《藏文读本》《实用藏语教程》等系统学习教材。</p>
+                    </li>
+                    <li class="resource-item">
+                        <h4>文化读物</h4>
+                        <p>介绍藏族历史、文化、艺术的科普读物和研究著作。</p>
+                    </li>
+                    <li class="resource-item">
+                        <h4>文学作品</h4>
+                        <p>《格萨尔王传》《仓央嘉措诗集》等经典文学作品。</p>
+                    </li>
+                    <li class="resource-item">
+                        <h4>学术论文</h4>
+                        <p>藏学研究领域的学术论文和研究报告。</p>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="resource-card">
+                <div class="resource-header">
+                    <span class="resource-icon">🔗</span>
+                    <div>
+                        <h3 style="color: var(--text-color); font-size: 1.75rem;">在线资源</h3>
+                        <p style="color: var(--text-light); margin: 0;">推荐的外部学习资源</p>
+                    </div>
+                </div>
+                <ul class="resource-list">
+                    <li class="resource-item">
+                        <h4>藏学研究机构</h4>
+                        <p>中国藏学研究中心、西藏大学等权威研究机构的在线资源。</p>
+                    </li>
+                    <li class="resource-item">
+                        <h4>数字图书馆</h4>
+                        <p>藏文古籍数字图书馆，提供大量珍贵文献的数字化版本。</p>
+                    </li>
+                    <li class="resource-item">
+                        <h4>在线词典</h4>
+                        <p>藏汉、汉藏在线词典工具，方便查询学习。</p>
+                    </li>
+                    <li class="resource-item">
+                        <h4>文化网站</h4>
+                        <p>介绍藏族文化的专业网站和博客。</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>关于平台</h4>
+                    <p>致力于传播和保护藏族优秀传统文化，为学习者提供全面的学习资源和交流空间。</p>
+                </div>
+                <div class="footer-section">
+                    <h4>快速链接</h4>
+                    <ul>
+                        <li><a href="../knowledge/index.html">知识库</a></li>
+                        <li><a href="index.html">学习资源</a></li>
+                        <li><a href="../community/index.html">交流社区</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>联系我们</h4>
+                    <p>如有问题或建议，欢迎通过 GitHub Issues 与我们联系。</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 藏文化学习交流平台 | 尊重文化，传承文明</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../../js/main.js"></script>
+</body>
+</html>

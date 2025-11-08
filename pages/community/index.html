@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>交流社区 - 藏文化学习交流平台</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <style>
+        .community-hero {
+            background: linear-gradient(135deg, #1976D2 0%, #42A5F5 100%);
+            color: white;
+            padding: 4rem 0;
+            text-align: center;
+        }
+        .forum-section {
+            padding: 4rem 0;
+        }
+        .forum-category {
+            background-color: var(--bg-color);
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+        .forum-category:hover {
+            box-shadow: var(--shadow-hover);
+        }
+        .forum-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid var(--border-color);
+        }
+        .forum-title {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        .forum-icon {
+            font-size: 2rem;
+        }
+        .forum-stats {
+            display: flex;
+            gap: 2rem;
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+        .discussion-item {
+            background-color: var(--bg-light);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+            border-left: 3px solid var(--primary-color);
+            transition: var(--transition);
+        }
+        .discussion-item:hover {
+            transform: translateX(5px);
+            border-left-color: var(--accent-color);
+        }
+        .discussion-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 0.75rem;
+            font-size: 0.875rem;
+            color: var(--text-light);
+        }
+        .user-info {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .post-form {
+            background-color: var(--bg-light);
+            padding: 2rem;
+            border-radius: 12px;
+            margin-bottom: 2rem;
+        }
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: var(--text-color);
+            font-weight: 500;
+        }
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: inherit;
+        }
+        .form-group textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+        .btn-submit {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 0.875rem 2rem;
+            border: none;
+            border-radius: 6px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        .btn-submit:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <h1>🏔️ 藏文化学习交流平台</h1>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="../../index.html">首页</a></li>
+                <li><a href="../knowledge/index.html">知识库</a></li>
+                <li><a href="../resources/index.html">学习资源</a></li>
+                <li><a href="index.html" class="active">交流社区</a></li>
+                <li><a href="#" id="themeToggle" class="theme-toggle">🌓</a></li>
+            </ul>
+            <div class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <header class="community-hero">
+        <div class="container">
+            <h2 style="font-size: 2.5rem; margin-bottom: 1rem;">交流社区</h2>
+            <p style="font-size: 1.2rem; opacity: 0.95;">与志同道合的朋友分享学习心得，共同探索藏文化</p>
+        </div>
+    </header>
+
+    <section class="forum-section">
+        <div class="container">
+            <div class="post-form">
+                <h3 style="color: var(--text-color); margin-bottom: 1.5rem;">发起新话题</h3>
+                <form id="newTopicForm">
+                    <div class="form-group">
+                        <label for="topicCategory">选择分类</label>
+                        <select id="topicCategory" required>
+                            <option value="">请选择分类</option>
+                            <option value="history">历史文化讨论</option>
+                            <option value="art">艺术文化交流</option>
+                            <option value="religion">宗教信仰探讨</option>
+                            <option value="language">藏语学习交流</option>
+                            <option value="experience">学习心得分享</option>
+                            <option value="question">问题求助</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="topicTitle">话题标题</label>
+                        <input type="text" id="topicTitle" placeholder="输入话题标题..." required>
+                    </div>
+                    <div class="form-group">
+                        <label for="topicContent">内容</label>
+                        <textarea id="topicContent" placeholder="分享您的想法、经验或问题..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn-submit">发布话题</button>
+                </form>
+            </div>
+
+            <div class="forum-category">
+                <div class="forum-header">
+                    <div class="forum-title">
+                        <span class="forum-icon">🏛️</span>
+                        <div>
+                            <h3 style="color: var(--text-color); margin: 0;">历史文化讨论</h3>
+                            <p style="color: var(--text-light); margin: 0; font-size: 0.9rem;">探讨藏族历史、历史事件和历史人物</p>
+                        </div>
+                    </div>
+                    <div class="forum-stats">
+                        <span>156 主题</span>
+                        <span>892 回复</span>
+                    </div>
+                </div>
+                <div class="discussion-item">
+                    <h4 style="color: var(--text-color); margin-bottom: 0.5rem;">吐蕃王朝的兴衰对藏族文化的影响</h4>
+                    <p style="color: var(--text-light); margin-bottom: 0.5rem;">吐蕃王朝是藏族历史上第一个统一的政权，它的建立和发展对藏族文化产生了深远影响。大家对这段历史有什么看法？</p>
+                    <div class="discussion-meta">
+                        <div class="user-info">
+                            <span>👤</span>
+                            <span>文化爱好者</span>
+                            <span>·</span>
+                            <span>2天前</span>
+                        </div>
+                        <div>
+                            <span>👁️ 234</span>
+                            <span style="margin-left: 1rem;">💬 18</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="discussion-item">
+                    <h4 style="color: var(--text-color); margin-bottom: 0.5rem;">文成公主入藏带来了哪些文化交流？</h4>
+                    <p style="color: var(--text-light); margin-bottom: 0.5rem;">文成公主入藏是汉藏文化交流的重要事件，她带去了大量的典籍、工艺和技术...</p>
+                    <div class="discussion-meta">
+                        <div class="user-info">
+                            <span>👤</span>
+                            <span>历史研究者</span>
+                            <span>·</span>
+                            <span>5天前</span>
+                        </div>
+                        <div>
+                            <span>👁️ 567</span>
+                            <span style="margin-left: 1rem;">💬 42</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="forum-category">
+                <div class="forum-header">
+                    <div class="forum-title">
+                        <span class="forum-icon">🎨</span>
+                        <div>
+                            <h3 style="color: var(--text-color); margin: 0;">艺术文化交流</h3>
+                            <p style="color: var(--text-light); margin: 0; font-size: 0.9rem;">分享唐卡、藏戏、音乐等艺术体验</p>
+                        </div>
+                    </div>
+                    <div class="forum-stats">
+                        <span>203 主题</span>
+                        <span>1,245 回复</span>
+                    </div>
+                </div>
+                <div class="discussion-item">
+                    <h4 style="color: var(--text-color); margin-bottom: 0.5rem;">唐卡绘制技艺的学习心得</h4>
+                    <p style="color: var(--text-light); margin-bottom: 0.5rem;">最近开始学习唐卡绘制，从基础的线条练习开始。唐卡的构图非常讲究，每一笔都要精准...</p>
+                    <div class="discussion-meta">
+                        <div class="user-info">
+                            <span>👤</span>
+                            <span>艺术学习者</span>
+                            <span>·</span>
+                            <span>1天前</span>
+                        </div>
+                        <div>
+                            <span>👁️ 189</span>
+                            <span style="margin-left: 1rem;">💬 25</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="discussion-item">
+                    <h4 style="color: var(--text-color); margin-bottom: 0.5rem;">藏戏表演的艺术特色</h4>
+                    <p style="color: var(--text-light); margin-bottom: 0.5rem;">上周观看了一场藏戏演出，被面具和服饰的精美所震撼。藏戏的唱腔独特...</p>
+                    <div class="discussion-meta">
+                        <div class="user-info">
+                            <span>👤</span>
+                            <span>戏剧爱好者</span>
+                            <span>·</span>
+                            <span>3天前</span>
+                        </div>
+                        <div>
+                            <span>👁️ 312</span>
+                            <span style="margin-left: 1rem;">💬 31</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="forum-category">
+                <div class="forum-header">
+                    <div class="forum-title">
+                        <span class="forum-icon">🔤</span>
+                        <div>
+                            <h3 style="color: var(--text-color); margin: 0;">藏语学习交流</h3>
+                            <p style="color: var(--text-light); margin: 0; font-size: 0.9rem;">分享学习方法，解答语言问题</p>
+                        </div>
+                    </div>
+                    <div class="forum-stats">
+                        <span>342 主题</span>
+                        <span>2,156 回复</span>
+                    </div>
+                </div>
+                <div class="discussion-item">
+                    <h4 style="color: var(--text-color); margin-bottom: 0.5rem;">藏文字母发音的难点和技巧</h4>
+                    <p style="color: var(--text-light); margin-bottom: 0.5rem;">学习藏语已经两个月了，发音还是有些困难。特别是送气音和不送气音的区别...</p>
+                    <div class="discussion-meta">
+                        <div class="user-info">
+                            <span>👤</span>
+                            <span>语言学习者</span>
+                            <span>·</span>
+                            <span>6小时前</span>
+                        </div>
+                        <div>
+                            <span>👁️ 145</span>
+                            <span style="margin-left: 1rem;">💬 12</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="discussion-item">
+                    <h4 style="color: var(--text-color); margin-bottom: 0.5rem;">推荐的藏语学习资源和APP</h4>
+                    <p style="color: var(--text-light); margin-bottom: 0.5rem;">想系统地学习藏语，大家有没有好的学习资源或APP推荐？</p>
+                    <div class="discussion-meta">
+                        <div class="user-info">
+                            <span>👤</span>
+                            <span>初学者</span>
+                            <span>·</span>
+                            <span>1天前</span>
+                        </div>
+                        <div>
+                            <span>👁️ 423</span>
+                            <span style="margin-left: 1rem;">💬 56</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="forum-category">
+                <div class="forum-header">
+                    <div class="forum-title">
+                        <span class="forum-icon">✍️</span>
+                        <div>
+                            <h3 style="color: var(--text-color); margin: 0;">学习心得分享</h3>
+                            <p style="color: var(--text-light); margin: 0; font-size: 0.9rem;">分享学习经验和感悟</p>
+                        </div>
+                    </div>
+                    <div class="forum-stats">
+                        <span>178 主题</span>
+                        <span>967 回复</span>
+                    </div>
+                </div>
+                <div class="discussion-item">
+                    <h4 style="color: var(--text-color); margin-bottom: 0.5rem;">我的西藏文化学习之旅</h4>
+                    <p style="color: var(--text-light); margin-bottom: 0.5rem;">从对藏文化一无所知，到现在能够阅读简单的藏文，这一年的学习让我收获良多...</p>
+                    <div class="discussion-meta">
+                        <div class="user-info">
+                            <span>👤</span>
+                            <span>文化探索者</span>
+                            <span>·</span>
+                            <span>4天前</span>
+                        </div>
+                        <div>
+                            <span>👁️ 678</span>
+                            <span style="margin-left: 1rem;">💬 89</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="forum-category">
+                <div class="forum-header">
+                    <div class="forum-title">
+                        <span class="forum-icon">❓</span>
+                        <div>
+                            <h3 style="color: var(--text-color); margin: 0;">问题求助</h3>
+                            <p style="color: var(--text-light); margin: 0; font-size: 0.9rem;">提出问题，寻求帮助</p>
+                        </div>
+                    </div>
+                    <div class="forum-stats">
+                        <span>234 主题</span>
+                        <span>1,567 回复</span>
+                    </div>
+                </div>
+                <div class="discussion-item">
+                    <h4 style="color: var(--text-color); margin-bottom: 0.5rem;">关于藏历和公历的换算问题</h4>
+                    <p style="color: var(--text-light); margin-bottom: 0.5rem;">想了解藏历新年的日期是如何确定的，与公历有什么换算关系？</p>
+                    <div class="discussion-meta">
+                        <div class="user-info">
+                            <span>👤</span>
+                            <span>求知者</span>
+                            <span>·</span>
+                            <span>12小时前</span>
+                        </div>
+                        <div>
+                            <span>👁️ 89</span>
+                            <span style="margin-left: 1rem;">💬 7</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>关于平台</h4>
+                    <p>致力于传播和保护藏族优秀传统文化，为学习者提供全面的学习资源和交流空间。</p>
+                </div>
+                <div class="footer-section">
+                    <h4>快速链接</h4>
+                    <ul>
+                        <li><a href="../knowledge/index.html">知识库</a></li>
+                        <li><a href="../resources/index.html">学习资源</a></li>
+                        <li><a href="index.html">交流社区</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>联系我们</h4>
+                    <p>如有问题或建议，欢迎通过 GitHub Issues 与我们联系。</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 藏文化学习交流平台 | 尊重文化，传承文明</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../../js/main.js"></script>
+    <script>
+        // 表单提交处理
+        document.getElementById('newTopicForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const category = document.getElementById('topicCategory').value;
+            const title = document.getElementById('topicTitle').value;
+            const content = document.getElementById('topicContent').value;
+
+            if (category && title && content) {
+                alert('话题发布成功！\n\n分类：' + category + '\n标题：' + title + '\n\n感谢您的分享！');
+                this.reset();
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>藏语学习 - 藏文化学习交流平台</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <style>
+        .learning-section {
+            background-color: var(--bg-color);
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: var(--shadow);
+        }
+        .learning-section h3 {
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+            font-size: 1.75rem;
+        }
+        .vocabulary-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        .vocab-card {
+            background-color: var(--bg-light);
+            padding: 1rem;
+            border-radius: 8px;
+            text-align: center;
+            border: 2px solid var(--border-color);
+        }
+        .vocab-tibetan {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+        .vocab-chinese {
+            color: var(--text-color);
+            font-weight: 500;
+        }
+        .vocab-pinyin {
+            color: var(--text-light);
+            font-size: 0.9rem;
+            font-style: italic;
+        }
+        .example-box {
+            background-color: var(--bg-light);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-top: 1rem;
+            border-left: 4px solid var(--accent-color);
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <h1>🏔️ 藏文化学习交流平台</h1>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="../../index.html">首页</a></li>
+                <li><a href="../knowledge/index.html">知识库</a></li>
+                <li><a href="index.html" class="active">学习资源</a></li>
+                <li><a href="../community/index.html">交流社区</a></li>
+                <li><a href="#" id="themeToggle" class="theme-toggle">🌓</a></li>
+            </ul>
+            <div class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <header style="background: linear-gradient(135deg, #1976D2 0%, #42A5F5 100%); color: white; padding: 3rem 0; text-align: center;">
+        <div class="container">
+            <h2 style="font-size: 2.5rem; margin-bottom: 1rem;">🔤 藏语学习</h2>
+            <p style="font-size: 1.2rem;">掌握藏语言文字的基础知识</p>
+        </div>
+    </header>
+
+    <section style="padding: 3rem 0;">
+        <div class="container">
+            <div class="learning-section" id="alphabet">
+                <h3>藏文字母</h3>
+                <p style="color: var(--text-light); line-height: 1.8; margin-bottom: 1rem;">藏文是拼音文字，由30个基字母（辅音）和4个元音符号组成。藏文字母创制于公元7世纪，由吐蕃大臣吞米·桑布扎在印度文字基础上创制而成。</p>
+
+                <h4 style="color: var(--text-color); margin: 1.5rem 0 1rem;">30个基字母</h4>
+                <p style="color: var(--text-light); margin-bottom: 1rem;">藏文30个基字母按照发音部位分为5组，每组6个字母：</p>
+                <div class="example-box">
+                    <p style="color: var(--text-color); margin-bottom: 0.5rem;"><strong>喉音：</strong>ཀ (ka) ཁ (kha) ག (ga) ང (nga)</p>
+                    <p style="color: var(--text-color); margin-bottom: 0.5rem;"><strong>腭音：</strong>ཅ (ca) ཆ (cha) ཇ (ja) ཉ (nya)</p>
+                    <p style="color: var(--text-color); margin-bottom: 0.5rem;"><strong>齿音：</strong>ཏ (ta) ཐ (tha) ད (da) ན (na)</p>
+                    <p style="color: var(--text-color); margin-bottom: 0.5rem;"><strong>唇音：</strong>པ (pa) ཕ (pha) བ (ba) མ (ma)</p>
+                    <p style="color: var(--text-color);"><strong>舌音：</strong>ཙ (tsa) ཚ (tsha) ཛ (dza) ཝ (wa) ཞ (zha) ཟ (za) འ ('a) ཡ (ya) ར (ra) ལ (la) ཤ (sha) ས (sa) ཧ (ha) ཨ (a)</p>
+                </div>
+
+                <h4 style="color: var(--text-color); margin: 1.5rem 0 1rem;">4个元音符号</h4>
+                <div class="example-box">
+                    <p style="color: var(--text-color); margin-bottom: 0.5rem;">ི (i) - 短i音</p>
+                    <p style="color: var(--text-color); margin-bottom: 0.5rem;">ུ (u) - 短u音</p>
+                    <p style="color: var(--text-color); margin-bottom: 0.5rem;">ེ (e) - e音</p>
+                    <p style="color: var(--text-color);">ོ (o) - o音</p>
+                </div>
+            </div>
+
+            <div class="learning-section" id="vocabulary">
+                <h3>基础词汇</h3>
+
+                <h4 style="color: var(--text-color); margin: 1.5rem 0 1rem;">问候语</h4>
+                <div class="vocabulary-grid">
+                    <div class="vocab-card">
+                        <div class="vocab-tibetan">བཀྲ་ཤིས་བདེ་ལེགས</div>
+                        <div class="vocab-chinese">吉祥如意</div>
+                        <div class="vocab-pinyin">tashi delek</div>
+                    </div>
+                    <div class="vocab-card">
+                        <div class="vocab-tibetan">ཁྱེད་རང་བདེ་མོ་ཡིན་པས</div>
+                        <div class="vocab-chinese">您好吗？</div>
+                        <div class="vocab-pinyin">khyerang demo yinpe</div>
+                    </div>
+                    <div class="vocab-card">
+                        <div class="vocab-tibetan">བདེ་པོ་ཡིན</div>
+                        <div class="vocab-chinese">我很好</div>
+                        <div class="vocab-pinyin">depo yin</div>
+                    </div>
+                    <div class="vocab-card">
+                        <div class="vocab-tibetan">ཐུགས་རྗེ་ཆེ</div>
+                        <div class="vocab-chinese">谢谢</div>
+                        <div class="vocab-pinyin">thukje che</div>
+                    </div>
+                </div>
+
+                <h4 style="color: var(--text-color); margin: 1.5rem 0 1rem;">数字（1-10）</h4>
+                <div class="vocabulary-grid">
+                    <div class="vocab-card">
+                        <div class="vocab-tibetan">གཅིག</div>
+                        <div class="vocab-chinese">一</div>
+                        <div class="vocab-pinyin">chik</div>
+                    </div>
+                    <div class="vocab-card">
+                        <div class="vocab-tibetan">གཉིས</div>
+                        <div class="vocab-chinese">二</div>
+                        <div class="vocab-pinyin">nyi</div>
+                    </div>
+                    <div class="vocab-card">
+                        <div class="vocab-tibetan">གསུམ</div>
+                        <div class="vocab-chinese">三</div>
+                        <div class="vocab-pinyin">sum</div>
+                    </div>
+                    <div class="vocab-card">
+                        <div class="vocab-tibetan">བཞི</div>
+                        <div class="vocab-chinese">四</div>
+                        <div class="vocab-pinyin">zhi</div>
+                    </div>
+                    <div class="vocab-card">
+                        <div class="vocab-tibetan">ལྔ</div>
+                        <div class="vocab-chinese">五</div>
+                        <div class="vocab-pinyin">nga</div>
+                    </div>
+                    <div class="vocab-card">
+                        <div class="vocab-tibetan">དྲུག</div>
+                        <div class="vocab-chinese">六</div>
+                        <div class="vocab-pinyin">truk</div>
+                    </div>
+                    <div class="vocab-card">
+                        <div class="vocab-tibetan">བདུན</div>
+                        <div class="vocab-chinese">七</div>
+                        <div class="vocab-pinyin">dun</div>
+                    </div>
+                    <div class="vocab-card">
+                        <div class="vocab-tibetan">བརྒྱད</div>
+                        <div class="vocab-chinese">八</div>
+                        <div class="vocab-pinyin">gye</div>
+                    </div>
+                    <div class="vocab-card">
+                        <div class="vocab-tibetan">དགུ</div>
+                        <div class="vocab-chinese">九</div>
+                        <div class="vocab-pinyin">gu</div>
+                    </div>
+                    <div class="vocab-card">
+                        <div class="vocab-tibetan">བཅུ</div>
+                        <div class="vocab-chinese">十</div>
+                        <div class="vocab-pinyin">chu</div>
+                    </div>
+                </div>
+
+                <h4 style="color: var(--text-color); margin: 1.5rem 0 1rem;">常用词汇</h4>
+                <div class="vocabulary-grid">
+                    <div class="vocab-card">
+                        <div class="vocab-tibetan">མི</div>
+                        <div class="vocab-chinese">人</div>
+                        <div class="vocab-pinyin">mi</div>
+                    </div>
+                    <div class="vocab-card">
+                        <div class="vocab-tibetan">ཁང་པ</div>
+                        <div class="vocab-chinese">房子</div>
+                        <div class="vocab-pinyin">khangpa</div>
+                    </div>
+                    <div class="vocab-card">
+                        <div class="vocab-tibetan">ཆུ</div>
+                        <div class="vocab-chinese">水</div>
+                        <div class="vocab-pinyin">chu</div>
+                    </div>
+                    <div class="vocab-card">
+                        <div class="vocab-tibetan">མེ</div>
+                        <div class="vocab-chinese">火</div>
+                        <div class="vocab-pinyin">me</div>
+                    </div>
+                    <div class="vocab-card">
+                        <div class="vocab-tibetan">རླུང</div>
+                        <div class="vocab-chinese">风</div>
+                        <div class="vocab-pinyin">lung</div>
+                    </div>
+                    <div class="vocab-card">
+                        <div class="vocab-tibetan">ས</div>
+                        <div class="vocab-chinese">地</div>
+                        <div class="vocab-pinyin">sa</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="learning-section" id="grammar">
+                <h3>基础语法</h3>
+                <p style="color: var(--text-light); line-height: 1.8; margin-bottom: 1rem;">藏语的基本语序是"主语-宾语-谓语"（SOV），这与汉语的"主语-谓语-宾语"（SVO）不同。</p>
+
+                <h4 style="color: var(--text-color); margin: 1.5rem 0 1rem;">基本句式</h4>
+                <div class="example-box">
+                    <p style="color: var(--text-color); margin-bottom: 0.5rem;"><strong>藏语：</strong>ང་ལ་དེབ་ཡོད། (nga la deb yö)</p>
+                    <p style="color: var(--text-light); margin-bottom: 1rem;">直译：我-有-书-有 → 我有书</p>
+
+                    <p style="color: var(--text-color); margin-bottom: 0.5rem;"><strong>藏语：</strong>ངས་ཞ་བཟས། (nge zha se)</p>
+                    <p style="color: var(--text-light);">直译：我（主格）-饭-吃了 → 我吃了饭</p>
+                </div>
+
+                <h4 style="color: var(--text-color); margin: 1.5rem 0 1rem;">格助词</h4>
+                <p style="color: var(--text-light); margin-bottom: 1rem;">藏语使用格助词来标明名词在句子中的语法功能：</p>
+                <div class="example-box">
+                    <p style="color: var(--text-color); margin-bottom: 0.5rem;"><strong>主格：</strong>ས、གིས (用于及物动词的主语)</p>
+                    <p style="color: var(--text-color); margin-bottom: 0.5rem;"><strong>属格：</strong>གི、ཀྱི (表示所属关系)</p>
+                    <p style="color: var(--text-color); margin-bottom: 0.5rem;"><strong>宾格：</strong>ལ、ར (表示间接宾语或方位)</p>
+                    <p style="color: var(--text-color);"><strong>从格：</strong>ནས、ལས (表示起点或来源)</p>
+                </div>
+            </div>
+
+            <div class="learning-section" id="speaking">
+                <h3>实用对话</h3>
+
+                <h4 style="color: var(--text-color); margin: 1.5rem 0 1rem;">场景一：初次见面</h4>
+                <div class="example-box">
+                    <p style="color: var(--text-color); margin-bottom: 0.5rem;">A: བཀྲ་ཤིས་བདེ་ལེགས། (tashi delek) - 您好！</p>
+                    <p style="color: var(--text-color); margin-bottom: 0.5rem;">B: བཀྲ་ཤིས་བདེ་ལེགས། (tashi delek) - 您好！</p>
+                    <p style="color: var(--text-color); margin-bottom: 0.5rem;">A: ཁྱེད་རང་གི་མིང་ལ་ག་རེ་ཟེར་གྱི་ཡོད། (khyerang gi ming la kare ser gyi yö) - 您叫什么名字？</p>
+                    <p style="color: var(--text-color);">B: ངའི་མིང་ལ་...ཟེར་གྱི་ཡོད། (ngai ming la... ser gyi yö) - 我叫...</p>
+                </div>
+
+                <h4 style="color: var(--text-color); margin: 1.5rem 0 1rem;">场景二：问路</h4>
+                <div class="example-box">
+                    <p style="color: var(--text-color); margin-bottom: 0.5rem;">...ག་པར་ཡོད། (...kapar yö) - ...在哪里？</p>
+                    <p style="color: var(--text-color); margin-bottom: 0.5rem;">དགོན་པ་ག་པར་ཡོད། (gönpa kapar yö) - 寺庙在哪里？</p>
+                    <p style="color: var(--text-color);">...ཁ་ཐུག་གི་ཡོད། (...khathuk gi yö) - ...在前面。</p>
+                </div>
+
+                <h4 style="color: var(--text-color); margin: 1.5rem 0 1rem;">场景三：购物</h4>
+                <div class="example-box">
+                    <p style="color: var(--text-color); margin-bottom: 0.5rem;">འདི་གོང་ག་ཚོད་རེད། ('di gong katsö re) - 这个多少钱？</p>
+                    <p style="color: var(--text-color); margin-bottom: 0.5rem;">གོང་ཆེན་པོ་འདུག (gong chenpo duk) - 太贵了。</p>
+                    <p style="color: var(--text-color);">གོང་ཆུང་ཆུང་བཟོ་རོགས་གནང། (gong chungchung so rok nang) - 请便宜一点。</p>
+                </div>
+            </div>
+
+            <div class="learning-section">
+                <h3>学习建议</h3>
+                <ul style="color: var(--text-light); line-height: 2; padding-left: 2rem;">
+                    <li>先掌握藏文字母的发音，多练习拼读</li>
+                    <li>从常用词汇和日常用语开始学习</li>
+                    <li>多听藏语音频，培养语感</li>
+                    <li>尝试用藏语进行简单对话练习</li>
+                    <li>了解藏族文化背景，有助于更好地理解语言</li>
+                    <li>持之以恒，每天坚持学习和练习</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>关于平台</h4>
+                    <p>致力于传播和保护藏族优秀传统文化，为学习者提供全面的学习资源和交流空间。</p>
+                </div>
+                <div class="footer-section">
+                    <h4>快速链接</h4>
+                    <ul>
+                        <li><a href="../knowledge/index.html">知识库</a></li>
+                        <li><a href="index.html">学习资源</a></li>
+                        <li><a href="../community/index.html">交流社区</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>联系我们</h4>
+                    <p>如有问题或建议，欢迎通过 GitHub Issues 与我们联系。</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 藏文化学习交流平台 | 尊重文化，传承文明</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../../js/main.js"></script>
+</body>
+</html>

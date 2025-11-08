@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>知识库 - 藏文化学习交流平台</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <style>
+        .knowledge-hero {
+            background: linear-gradient(135deg, #1976D2 0%, #42A5F5 100%);
+            color: white;
+            padding: 4rem 0;
+            text-align: center;
+        }
+
+        .knowledge-categories {
+            padding: 4rem 0;
+        }
+
+        .knowledge-card {
+            background-color: var(--bg-color);
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            border-left: 4px solid var(--primary-color);
+        }
+
+        .knowledge-card:hover {
+            transform: translateX(5px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .knowledge-card-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .knowledge-card-icon {
+            font-size: 2.5rem;
+        }
+
+        .knowledge-card h3 {
+            color: var(--text-color);
+            font-size: 1.75rem;
+        }
+
+        .knowledge-card-content {
+            color: var(--text-light);
+            margin-bottom: 1rem;
+        }
+
+        .knowledge-topics {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .topic-tag {
+            background-color: var(--bg-light);
+            color: var(--text-color);
+            padding: 0.375rem 0.875rem;
+            border-radius: 20px;
+            font-size: 0.875rem;
+            border: 1px solid var(--border-color);
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <h1>🏔️ 藏文化学习交流平台</h1>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="../../index.html">首页</a></li>
+                <li><a href="index.html" class="active">知识库</a></li>
+                <li><a href="../resources/index.html">学习资源</a></li>
+                <li><a href="../community/index.html">交流社区</a></li>
+                <li><a href="#" id="themeToggle" class="theme-toggle">🌓</a></li>
+            </ul>
+            <div class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <header class="knowledge-hero">
+        <div class="container">
+            <h2 style="font-size: 2.5rem; margin-bottom: 1rem;">藏文化知识库</h2>
+            <p style="font-size: 1.2rem; opacity: 0.95;">探索博大精深的藏族文化，了解雪域高原的历史与文明</p>
+        </div>
+    </header>
+
+    <section class="knowledge-categories">
+        <div class="container">
+            <div class="knowledge-card">
+                <div class="knowledge-card-header">
+                    <span class="knowledge-card-icon">🏛️</span>
+                    <h3>历史文化</h3>
+                </div>
+                <div class="knowledge-card-content">
+                    <p>藏族拥有悠久的历史，从古代吐蕃王朝到现代，历经千年发展形成了独特的历史文化。探索藏族历史的发展脉络，了解重要历史事件和杰出人物。</p>
+                </div>
+                <div class="knowledge-topics">
+                    <span class="topic-tag">吐蕃王朝</span>
+                    <span class="topic-tag">松赞干布</span>
+                    <span class="topic-tag">文成公主</span>
+                    <span class="topic-tag">历史发展</span>
+                    <span class="topic-tag">重要事件</span>
+                </div>
+                <a href="history.html" class="feature-link">详细了解 →</a>
+            </div>
+
+            <div class="knowledge-card">
+                <div class="knowledge-card-header">
+                    <span class="knowledge-card-icon">🎨</span>
+                    <h3>艺术文化</h3>
+                </div>
+                <div class="knowledge-card-content">
+                    <p>藏族艺术形式丰富多样，包括唐卡绘画、藏戏表演、传统音乐、舞蹈等。这些艺术形式不仅具有极高的审美价值，更承载着深厚的文化内涵。</p>
+                </div>
+                <div class="knowledge-topics">
+                    <span class="topic-tag">唐卡艺术</span>
+                    <span class="topic-tag">藏戏</span>
+                    <span class="topic-tag">传统音乐</span>
+                    <span class="topic-tag">舞蹈</span>
+                    <span class="topic-tag">工艺美术</span>
+                </div>
+                <a href="art.html" class="feature-link">详细了解 →</a>
+            </div>
+
+            <div class="knowledge-card">
+                <div class="knowledge-card-header">
+                    <span class="knowledge-card-icon">🙏</span>
+                    <h3>宗教信仰</h3>
+                </div>
+                <div class="knowledge-card-content">
+                    <p>藏传佛教是藏族文化的重要组成部分，影响着藏族人民的生活方式和精神世界。了解藏传佛教的历史、教派、寺庙建筑和宗教仪式。</p>
+                </div>
+                <div class="knowledge-topics">
+                    <span class="topic-tag">藏传佛教</span>
+                    <span class="topic-tag">佛教教派</span>
+                    <span class="topic-tag">寺庙文化</span>
+                    <span class="topic-tag">宗教仪式</span>
+                    <span class="topic-tag">佛教艺术</span>
+                </div>
+                <a href="religion.html" class="feature-link">详细了解 →</a>
+            </div>
+
+            <div class="knowledge-card">
+                <div class="knowledge-card-header">
+                    <span class="knowledge-card-icon">🏔️</span>
+                    <h3>地理风情</h3>
+                </div>
+                <div class="knowledge-card-content">
+                    <p>青藏高原被称为"世界屋脊"，拥有独特的地理环境和壮丽的自然景观。探索西藏的地理特征、民俗风情和传统节日。</p>
+                </div>
+                <div class="knowledge-topics">
+                    <span class="topic-tag">青藏高原</span>
+                    <span class="topic-tag">自然景观</span>
+                    <span class="topic-tag">民俗风情</span>
+                    <span class="topic-tag">传统节日</span>
+                    <span class="topic-tag">藏族服饰</span>
+                </div>
+                <a href="geography.html" class="feature-link">详细了解 →</a>
+            </div>
+
+            <div class="knowledge-card">
+                <div class="knowledge-card-header">
+                    <span class="knowledge-card-icon">📖</span>
+                    <h3>文学典籍</h3>
+                </div>
+                <div class="knowledge-card-content">
+                    <p>藏族拥有丰富的文学遗产，包括史诗《格萨尔王传》、宗教经典、诗歌、民间故事等。这些典籍是藏族智慧和文化的结晶。</p>
+                </div>
+                <div class="knowledge-topics">
+                    <span class="topic-tag">格萨尔王传</span>
+                    <span class="topic-tag">藏医典籍</span>
+                    <span class="topic-tag">诗歌文学</span>
+                    <span class="topic-tag">民间故事</span>
+                    <span class="topic-tag">宗教经典</span>
+                </div>
+                <a href="literature.html" class="feature-link">详细了解 →</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>关于平台</h4>
+                    <p>致力于传播和保护藏族优秀传统文化，为学习者提供全面的学习资源和交流空间。</p>
+                </div>
+                <div class="footer-section">
+                    <h4>快速链接</h4>
+                    <ul>
+                        <li><a href="index.html">知识库</a></li>
+                        <li><a href="../resources/index.html">学习资源</a></li>
+                        <li><a href="../community/index.html">交流社区</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>联系我们</h4>
+                    <p>如有问题或建议，欢迎通过 GitHub Issues 与我们联系。</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 藏文化学习交流平台 | 尊重文化，传承文明</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../../js/main.js"></script>
+</body>
+</html>
